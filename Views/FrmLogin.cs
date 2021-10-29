@@ -38,6 +38,7 @@ namespace Sisventa.Views
         {
             using (dbventasEntities2 contexto = new dbventasEntities2())
             {
+               
                 var ist = from d in contexto.trabajador
                           where d.usuario == txtUsuario.Text
                           && d.password == txtPassword.Text
@@ -52,7 +53,7 @@ namespace Sisventa.Views
                 }
                 else
                 {
-                    MessageBox.Show("Usuario Existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El Usuario no Existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
